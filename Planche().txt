@@ -1,0 +1,468 @@
+'PAR DOUGHMI NAWFAL
+'INGENIEUR D'ETAT EN GENIE INDUSTRIEL OPTION LOGISTIQUE
+'ESITH CASABLANCA
+Sub plache()
+Dim i As Integer
+Dim j As Integer
+j = 0
+'pour equipe JAF
+
+For i = 0 To 21
+If Worksheets("copier").Cells(94 + i, 4) <> "N7" And Worksheets("copier").Cells(94 + i, 4) <> "AT" And Worksheets("copier").Cells(94 + i, 4) <> "MD" And Worksheets("copier").Cells(94 + i, 4) <> "SRT" And Worksheets("copier").Cells(94 + i, 4) <> "Omra" And Worksheets("copier").Cells(94 + i, 4) <> "ABI" And Worksheets("copier").Cells(94 + i, 4) <> "CM" And Worksheets("copier").Cells(94 + i, 4) <> "R_NO7" And Worksheets("copier").Cells(94 + i, 4) <> "R_M7" And Worksheets("copier").Cells(94 + i, 4) <> "REC" And Worksheets("copier").Cells(94 + i, 4) <> "MAT" And Worksheets("copier").Cells(94 + i, 4) <> "SSP" And Worksheets("copier").Cells(94 + i, 4) <> "Off" And Worksheets("copier").Cells(94 + i, 4) <> "CA" And Worksheets("copier").Cells(94 + i, 4) <> "N" And Worksheets("copier").Cells(94 + i, 4) <> "--" And Worksheets("copier").Cells(94 + i, 4) <> "FOR" And Worksheets("copier").Cells(94 + i, 4) <> "NO" Then
+Worksheets("pm").Cells(21 + j, 1) = Worksheets("copier").Cells(94 + i, 3)
+' A PARTIR DE LA ON COMMENCE LA COLORATION DES PLAGES HORAIRES SELON LES CONDITIONS DU SHIFTING
+If Worksheets("copier").Cells(94 + i, 4) = "M7" Then
+Range(Worksheets("pm").Cells(21 + j, 55), Worksheets("pm").Cells(21 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(94 + i, 4) = "A7" Then
+Range(Worksheets("pm").Cells(21 + j, 2), Worksheets("pm").Cells(21 + j, 49)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(94 + i, 4) = "NO7" Then
+Range(Worksheets("pm").Cells(21 + j, 2), Worksheets("pm").Cells(21 + j, 23)).Interior.Color = 255
+Range(Worksheets("pm").Cells(21 + j, 80), Worksheets("pm").Cells(21 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(94 + i, 4) = "A8" Then
+Range(Worksheets("pm").Cells(21 + j, 2), Worksheets("pm").Cells(21 + j, 71)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(94 + i, 4) = "J2" Then
+Range(Worksheets("pm").Cells(21 + j, 2), Worksheets("pm").Cells(21 + j, 7)).Interior.Color = 255
+Range(Worksheets("pm").Cells(21 + j, 80), Worksheets("pm").Cells(21 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(94 + i, 4) = "J1" Then
+Range(Worksheets("pm").Cells(21 + j, 74), Worksheets("pm").Cells(21 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(94 + i, 4) = "J6" Then
+Range(Worksheets("pm").Cells(21 + j, 68), Worksheets("pm").Cells(21 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(94 + i, 4) = "A1" Then
+Range(Worksheets("pm").Cells(21 + j, 49), Worksheets("pm").Cells(21 + j, 85)).Interior.Color = 255
+End If
+
+j = j + 1
+
+End If
+Next i
+'Pour TK
+j = 0
+For i = 0 To 23
+If Worksheets("copier").Cells(14 + i, 4) <> "N7" And Worksheets("copier").Cells(14 + i, 4) <> "AT" And Worksheets("copier").Cells(14 + i, 4) <> "MD" And Worksheets("copier").Cells(14 + i, 4) <> "SRT" And Worksheets("copier").Cells(14 + i, 4) <> "Omra" And Worksheets("copier").Cells(14 + i, 4) <> "ABI" And Worksheets("copier").Cells(14 + i, 4) <> "CM" And Worksheets("copier").Cells(14 + i, 4) <> "R_NO7" And Worksheets("copier").Cells(14 + i, 4) <> "R_M7" And Worksheets("copier").Cells(14 + i, 4) <> "REC" And Worksheets("copier").Cells(14 + i, 4) <> "MAT" And Worksheets("copier").Cells(14 + i, 4) <> "SSP" And Worksheets("copier").Cells(14 + i, 4) <> "Off" And Worksheets("copier").Cells(14 + i, 4) <> "CA" And Worksheets("copier").Cells(14 + i, 4) <> "--" And Worksheets("copier").Cells(14 + i, 4) <> "FOR" And Worksheets("copier").Cells(14 + i, 4) <> "NO" Then
+Worksheets("pm").Cells(38 + j, 1) = Worksheets("copier").Cells(14 + i, 3)
+If Worksheets("copier").Cells(14 + i, 4) = "M7" Then
+Range(Worksheets("pm").Cells(38 + j, 55), Worksheets("pm").Cells(38 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(14 + i, 4) = "A7" Then
+Range(Worksheets("pm").Cells(38 + j, 2), Worksheets("pm").Cells(38 + j, 49)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(14 + i, 4) = "NO7" Then
+Range(Worksheets("pm").Cells(38 + j, 2), Worksheets("pm").Cells(38 + j, 23)).Interior.Color = 255
+Range(Worksheets("pm").Cells(38 + j, 80), Worksheets("pm").Cells(38 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(14 + i, 4) = "A8" Then
+Range(Worksheets("pm").Cells(38 + j, 2), Worksheets("pm").Cells(38 + j, 71)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(14 + i, 4) = "J2" Then
+Range(Worksheets("pm").Cells(38 + j, 2), Worksheets("pm").Cells(38 + j, 7)).Interior.Color = 255
+Range(Worksheets("pm").Cells(38 + j, 80), Worksheets("pm").Cells(38 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(14 + i, 4) = "J1" Then
+Range(Worksheets("pm").Cells(38 + j, 74), Worksheets("pm").Cells(38 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(14 + i, 4) = "J6" Then
+Range(Worksheets("pm").Cells(38 + j, 68), Worksheets("pm").Cells(38 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(14 + i, 4) = "A1" Then
+Range(Worksheets("pm").Cells(38 + j, 49), Worksheets("pm").Cells(38 + j, 85)).Interior.Color = 255
+End If
+
+
+j = j + 1
+End If
+Next i
+'Pour QR
+j = 0
+For i = 0 To 22
+If Worksheets("copier").Cells(63 + i, 4) <> "N7" And Worksheets("copier").Cells(63 + i, 4) <> "AT" And Worksheets("copier").Cells(63 + i, 4) <> "MD" And Worksheets("copier").Cells(63 + i, 4) <> "SRT" And Worksheets("copier").Cells(63 + i, 4) <> "Omra" And Worksheets("copier").Cells(63 + i, 4) <> "ABI" And Worksheets("copier").Cells(63 + i, 4) <> "CM" And Worksheets("copier").Cells(63 + i, 4) <> "R_NO7" And Worksheets("copier").Cells(63 + i, 4) <> "R_M7" And Worksheets("copier").Cells(63 + i, 4) <> "REC" And Worksheets("copier").Cells(63 + i, 4) <> "MAT" And Worksheets("copier").Cells(63 + i, 4) <> "SSP" And Worksheets("copier").Cells(63 + i, 4) <> "Off" And Worksheets("copier").Cells(63 + i, 4) <> "CA" And Worksheets("copier").Cells(63 + i, 4) <> "--" And Worksheets("copier").Cells(63 + i, 4) <> "FOR" And Worksheets("copier").Cells(63 + i, 4) <> "NO" Then
+Worksheets("pm").Cells(60 + j, 1) = Worksheets("copier").Cells(63 + i, 3)
+If Worksheets("copier").Cells(63 + i, 4) = "M7" Then
+Range(Worksheets("pm").Cells(60 + j, 55), Worksheets("pm").Cells(60 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(63 + i, 4) = "A7" Then
+Range(Worksheets("pm").Cells(60 + j, 2), Worksheets("pm").Cells(60 + j, 49)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(63 + i, 4) = "NO7" Then
+Range(Worksheets("pm").Cells(60 + j, 2), Worksheets("pm").Cells(60 + j, 23)).Interior.Color = 255
+Range(Worksheets("pm").Cells(60 + j, 80), Worksheets("pm").Cells(60 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(63 + i, 4) = "A8" Then
+Range(Worksheets("pm").Cells(60 + j, 2), Worksheets("pm").Cells(60 + j, 71)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(63 + i, 4) = "J2" Then
+Range(Worksheets("pm").Cells(60 + j, 2), Worksheets("pm").Cells(60 + j, 7)).Interior.Color = 255
+Range(Worksheets("pm").Cells(60 + j, 80), Worksheets("pm").Cells(60 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(63 + i, 4) = "J1" Then
+Range(Worksheets("pm").Cells(60 + j, 74), Worksheets("pm").Cells(60 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(63 + i, 4) = "J6" Then
+Range(Worksheets("pm").Cells(60 + j, 68), Worksheets("pm").Cells(60 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(63 + i, 4) = "A1" Then
+Range(Worksheets("pm").Cells(60 + j, 49), Worksheets("pm").Cells(60 + j, 85)).Interior.Color = 255
+End If
+
+j = j + 1
+End If
+Next i
+'Pour EY
+j = 0
+For i = 0 To 16
+If Worksheets("copier").Cells(127 + i, 4) <> "N7" And Worksheets("copier").Cells(127 + i, 4) <> "AT" And Worksheets("copier").Cells(127 + i, 4) <> "MD" And Worksheets("copier").Cells(127 + i, 4) <> "SRT" And Worksheets("copier").Cells(127 + i, 4) <> "Omra" And Worksheets("copier").Cells(127 + i, 4) <> "ABI" And Worksheets("copier").Cells(127 + i, 4) <> "CM" And Worksheets("copier").Cells(127 + i, 4) <> "R_NO7" And Worksheets("copier").Cells(127 + i, 4) <> "R_M7" And Worksheets("copier").Cells(127 + i, 4) <> "REC" And Worksheets("copier").Cells(127 + i, 4) <> "MAT" And Worksheets("copier").Cells(127 + i, 4) <> "SSP" And Worksheets("copier").Cells(127 + i, 4) <> "Off" And Worksheets("copier").Cells(127 + i, 4) <> "CA" And Worksheets("copier").Cells(127 + i, 4) <> "--" And Worksheets("copier").Cells(127 + i, 4) <> "FOR" And Worksheets("copier").Cells(127 + i, 4) <> "NO" Then
+Worksheets("pm").Cells(79 + j, 1) = Worksheets("copier").Cells(127 + i, 3)
+If Worksheets("copier").Cells(127 + i, 4) = "M7" Then
+Range(Worksheets("pm").Cells(79 + j, 55), Worksheets("pm").Cells(79 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(127 + i, 4) = "A7" Then
+Range(Worksheets("pm").Cells(79 + j, 2), Worksheets("pm").Cells(79 + j, 49)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(127 + i, 4) = "NO7" Then
+Range(Worksheets("pm").Cells(79 + j, 2), Worksheets("pm").Cells(79 + j, 23)).Interior.Color = 255
+Range(Worksheets("pm").Cells(79 + j, 80), Worksheets("pm").Cells(79 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(127 + i, 4) = "A8" Then
+Range(Worksheets("pm").Cells(79 + j, 2), Worksheets("pm").Cells(79 + j, 71)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(127 + i, 4) = "J2" Then
+Range(Worksheets("pm").Cells(79 + j, 2), Worksheets("pm").Cells(79 + j, 7)).Interior.Color = 255
+Range(Worksheets("pm").Cells(79 + j, 80), Worksheets("pm").Cells(79 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(127 + i, 4) = "J1" Then
+Range(Worksheets("pm").Cells(79 + j, 74), Worksheets("pm").Cells(79 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(127 + i, 4) = "J6" Then
+Range(Worksheets("pm").Cells(79 + j, 68), Worksheets("pm").Cells(79 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(127 + i, 4) = "A1" Then
+Range(Worksheets("pm").Cells(79 + j, 49), Worksheets("pm").Cells(79 + j, 85)).Interior.Color = 255
+End If
+
+j = j + 1
+End If
+Next i
+'Pour SV
+j = 0
+For i = 0 To 24
+If Worksheets("copier").Cells(38 + i, 4) <> "N7" And Worksheets("copier").Cells(38 + i, 4) <> "AT" And Worksheets("copier").Cells(38 + i, 4) <> "MD" And Worksheets("copier").Cells(38 + i, 4) <> "SRT" And Worksheets("copier").Cells(38 + i, 4) <> "Omra" And Worksheets("copier").Cells(38 + i, 4) <> "ABI" And Worksheets("copier").Cells(38 + i, 4) <> "CM" And Worksheets("copier").Cells(38 + i, 4) <> "R_NO7" And Worksheets("copier").Cells(38 + i, 4) <> "R_M7" And Worksheets("copier").Cells(38 + i, 4) <> "REC" And Worksheets("copier").Cells(38 + i, 4) <> "MAT" And Worksheets("copier").Cells(38 + i, 4) <> "SSP" And Worksheets("copier").Cells(38 + i, 4) <> "Off" And Worksheets("copier").Cells(38 + i, 4) <> "CA" And Worksheets("copier").Cells(38 + i, 4) <> "--" And Worksheets("copier").Cells(38 + i, 4) <> "FOR" And Worksheets("copier").Cells(38 + i, 4) <> "NO" Then
+Worksheets("pm").Cells(93 + j, 1) = Worksheets("copier").Cells(38 + i, 3)
+If Worksheets("copier").Cells(38 + i, 4) = "M7" Then
+Range(Worksheets("pm").Cells(93 + j, 55), Worksheets("pm").Cells(93 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(38 + i, 4) = "A7" Then
+Range(Worksheets("pm").Cells(93 + j, 2), Worksheets("pm").Cells(93 + j, 49)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(38 + i, 4) = "NO7" Then
+Range(Worksheets("pm").Cells(93 + j, 2), Worksheets("pm").Cells(93 + j, 23)).Interior.Color = 255
+Range(Worksheets("pm").Cells(93 + j, 80), Worksheets("pm").Cells(93 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(38 + i, 4) = "A8" Then
+Range(Worksheets("pm").Cells(93 + j, 2), Worksheets("pm").Cells(93 + j, 71)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(38 + i, 4) = "J2" Then
+Range(Worksheets("pm").Cells(93 + j, 2), Worksheets("pm").Cells(93 + j, 7)).Interior.Color = 255
+Range(Worksheets("pm").Cells(93 + j, 80), Worksheets("pm").Cells(93 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(38 + i, 4) = "J1" Then
+Range(Worksheets("pm").Cells(93 + j, 74), Worksheets("pm").Cells(93 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(38 + i, 4) = "J6" Then
+Range(Worksheets("pm").Cells(93 + j, 68), Worksheets("pm").Cells(93 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(38 + i, 4) = "A1" Then
+Range(Worksheets("pm").Cells(93 + j, 49), Worksheets("pm").Cells(93 + j, 85)).Interior.Color = 255
+End If
+
+j = j + 1
+End If
+Next i
+'Pour AH
+j = 0
+For i = 0 To 15
+If Worksheets("copier").Cells(202 + i, 4) <> "N7" And Worksheets("copier").Cells(202 + i, 4) <> "AT" And Worksheets("copier").Cells(202 + i, 4) <> "MD" And Worksheets("copier").Cells(202 + i, 4) <> "SRT" And Worksheets("copier").Cells(202 + i, 4) <> "Omra" And Worksheets("copier").Cells(202 + i, 4) <> "ABI" And Worksheets("copier").Cells(202 + i, 4) <> "CM" And Worksheets("copier").Cells(202 + i, 4) <> "R_NO7" And Worksheets("copier").Cells(202 + i, 4) <> "R_M7" And Worksheets("copier").Cells(202 + i, 4) <> "REC" And Worksheets("copier").Cells(202 + i, 4) <> "MAT" And Worksheets("copier").Cells(202 + i, 4) <> "SSP" And Worksheets("copier").Cells(202 + i, 4) <> "Off" And Worksheets("copier").Cells(202 + i, 4) <> "CA" And Worksheets("copier").Cells(202 + i, 4) <> "--" And Worksheets("copier").Cells(202 + i, 4) <> "FOR" And Worksheets("copier").Cells(202 + i, 4) <> "NO" Then
+Worksheets("pm").Cells(114 + j, 1) = Worksheets("copier").Cells(202 + i, 3)
+If Worksheets("copier").Cells(202 + i, 4) = "M7" Then
+Range(Worksheets("pm").Cells(114 + j, 55), Worksheets("pm").Cells(114 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(202 + i, 4) = "A7" Then
+Range(Worksheets("pm").Cells(114 + j, 2), Worksheets("pm").Cells(114 + j, 49)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(202 + i, 4) = "NO7" Then
+Range(Worksheets("pm").Cells(114 + j, 2), Worksheets("pm").Cells(114 + j, 23)).Interior.Color = 255
+Range(Worksheets("pm").Cells(114 + j, 80), Worksheets("pm").Cells(114 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(202 + i, 4) = "A8" Then
+Range(Worksheets("pm").Cells(114 + j, 2), Worksheets("pm").Cells(114 + j, 71)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(202 + i, 4) = "J2" Then
+Range(Worksheets("pm").Cells(114 + j, 2), Worksheets("pm").Cells(114 + j, 7)).Interior.Color = 255
+Range(Worksheets("pm").Cells(114 + j, 80), Worksheets("pm").Cells(114 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(202 + i, 4) = "J1" Then
+Range(Worksheets("pm").Cells(114 + j, 74), Worksheets("pm").Cells(114 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(202 + i, 4) = "J6" Then
+Range(Worksheets("pm").Cells(114 + j, 68), Worksheets("pm").Cells(114 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(202 + i, 4) = "A1" Then
+Range(Worksheets("pm").Cells(114 + j, 49), Worksheets("pm").Cells(114 + j, 85)).Interior.Color = 255
+End If
+
+j = j + 1
+End If
+Next i
+'pour EK
+j = 0
+For i = 0 To 28
+If Worksheets("copier").Cells(144 + i, 4) <> "N7" And Worksheets("copier").Cells(144 + i, 4) <> "AT" And Worksheets("copier").Cells(144 + i, 4) <> "MD" And Worksheets("copier").Cells(144 + i, 4) <> "SRT" And Worksheets("copier").Cells(144 + i, 4) <> "Omra" And Worksheets("copier").Cells(144 + i, 4) <> "ABI" And Worksheets("copier").Cells(144 + i, 4) <> "CM" And Worksheets("copier").Cells(144 + i, 4) <> "R_NO7" And Worksheets("copier").Cells(144 + i, 4) <> "R_M7" And Worksheets("copier").Cells(144 + i, 4) <> "REC" And Worksheets("copier").Cells(144 + i, 4) <> "MAT" And Worksheets("copier").Cells(144 + i, 4) <> "SSP" And Worksheets("copier").Cells(144 + i, 4) <> "Off" And Worksheets("copier").Cells(144 + i, 4) <> "CA" And Worksheets("copier").Cells(144 + i, 4) <> "--" And Worksheets("copier").Cells(144 + i, 4) <> "FOR" And Worksheets("copier").Cells(144 + i, 4) <> "NO" Then
+Worksheets("pm").Cells(129 + j, 1) = Worksheets("copier").Cells(144 + i, 3)
+If Worksheets("copier").Cells(144 + i, 4) = "M7" Then
+Range(Worksheets("pm").Cells(129 + j, 55), Worksheets("pm").Cells(129 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(144 + i, 4) = "A7" Then
+Range(Worksheets("pm").Cells(129 + j, 2), Worksheets("pm").Cells(129 + j, 49)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(144 + i, 4) = "NO7" Then
+Range(Worksheets("pm").Cells(129 + j, 2), Worksheets("pm").Cells(129 + j, 23)).Interior.Color = 255
+Range(Worksheets("pm").Cells(129 + j, 80), Worksheets("pm").Cells(129 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(144 + i, 4) = "A8" Then
+Range(Worksheets("pm").Cells(129 + j, 2), Worksheets("pm").Cells(129 + j, 71)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(144 + i, 4) = "J2" Then
+Range(Worksheets("pm").Cells(129 + j, 2), Worksheets("pm").Cells(129 + j, 7)).Interior.Color = 255
+Range(Worksheets("pm").Cells(129 + j, 80), Worksheets("pm").Cells(129 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(144 + i, 4) = "J1" Then
+Range(Worksheets("pm").Cells(129 + j, 74), Worksheets("pm").Cells(129 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(144 + i, 4) = "J6" Then
+Range(Worksheets("pm").Cells(129 + j, 68), Worksheets("pm").Cells(129 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(144 + i, 4) = "A1" Then
+Range(Worksheets("pm").Cells(129 + j, 49), Worksheets("pm").Cells(129 + j, 85)).Interior.Color = 255
+End If
+
+j = j + 1
+End If
+Next i
+'Pour AF
+j = 0
+For i = 0 To 22
+If Worksheets("copier").Cells(218 + i, 4) <> "N7" And Worksheets("copier").Cells(218 + i, 4) <> "AT" And Worksheets("copier").Cells(218 + i, 4) <> "MD" And Worksheets("copier").Cells(218 + i, 4) <> "SRT" And Worksheets("copier").Cells(218 + i, 4) <> "Omra" And Worksheets("copier").Cells(218 + i, 4) <> "ABI" And Worksheets("copier").Cells(218 + i, 4) <> "CM" And Worksheets("copier").Cells(218 + i, 4) <> "R_NO7" And Worksheets("copier").Cells(218 + i, 4) <> "R_M7" And Worksheets("copier").Cells(218 + i, 4) <> "REC" And Worksheets("copier").Cells(218 + i, 4) <> "MAT" And Worksheets("copier").Cells(218 + i, 4) <> "SSP" And Worksheets("copier").Cells(218 + i, 4) <> "Off" And Worksheets("copier").Cells(218 + i, 4) <> "CA" And Worksheets("copier").Cells(218 + i, 4) <> "--" And Worksheets("copier").Cells(218 + i, 4) <> "FOR" And Worksheets("copier").Cells(218 + i, 4) <> "NO" Then
+Worksheets("pm").Cells(156 + j, 1) = Worksheets("copier").Cells(218 + i, 3)
+If Worksheets("copier").Cells(218 + i, 4) = "M7" Then
+Range(Worksheets("pm").Cells(156 + j, 55), Worksheets("pm").Cells(156 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(218 + i, 4) = "A7" Then
+Range(Worksheets("pm").Cells(156 + j, 2), Worksheets("pm").Cells(156 + j, 49)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(218 + i, 4) = "NO7" Then
+Range(Worksheets("pm").Cells(156 + j, 2), Worksheets("pm").Cells(156 + j, 23)).Interior.Color = 255
+Range(Worksheets("pm").Cells(156 + j, 80), Worksheets("pm").Cells(156 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(218 + i, 4) = "A8" Then
+Range(Worksheets("pm").Cells(156 + j, 2), Worksheets("pm").Cells(156 + j, 71)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(218 + i, 4) = "J2" Then
+Range(Worksheets("pm").Cells(156 + j, 2), Worksheets("pm").Cells(156 + j, 7)).Interior.Color = 255
+Range(Worksheets("pm").Cells(156 + j, 80), Worksheets("pm").Cells(156 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(218 + i, 4) = "J1" Then
+Range(Worksheets("pm").Cells(156 + j, 74), Worksheets("pm").Cells(156 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(218 + i, 4) = "J6" Then
+Range(Worksheets("pm").Cells(156 + j, 68), Worksheets("pm").Cells(156 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(218 + i, 4) = "A1" Then
+Range(Worksheets("pm").Cells(156 + j, 49), Worksheets("pm").Cells(156 + j, 85)).Interior.Color = 255
+End If
+
+j = j + 1
+End If
+Next i
+'Pour HV
+j = 0
+For i = 0 To 10
+If Worksheets("copier").Cells(116 + i, 4) <> "N7" And Worksheets("copier").Cells(116 + i, 4) <> "AT" And Worksheets("copier").Cells(116 + i, 4) <> "MD" And Worksheets("copier").Cells(116 + i, 4) <> "SRT" And Worksheets("copier").Cells(116 + i, 4) <> "Omra" And Worksheets("copier").Cells(116 + i, 4) <> "ABI" And Worksheets("copier").Cells(116 + i, 4) <> "CM" And Worksheets("copier").Cells(116 + i, 4) <> "R_NO7" And Worksheets("copier").Cells(116 + i, 4) <> "R_M7" And Worksheets("copier").Cells(116 + i, 4) <> "REC" And Worksheets("copier").Cells(116 + i, 4) <> "MAT" And Worksheets("copier").Cells(116 + i, 4) <> "SSP" And Worksheets("copier").Cells(116 + i, 4) <> "Off" And Worksheets("copier").Cells(116 + i, 4) <> "CA" And Worksheets("copier").Cells(116 + i, 4) <> "--" And Worksheets("copier").Cells(116 + i, 4) <> "FOR" And Worksheets("copier").Cells(116 + i, 4) <> "NO" Then
+Worksheets("pm").Cells(176 + j, 1) = Worksheets("copier").Cells(116 + i, 3)
+If Worksheets("copier").Cells(116 + i, 4) = "M7" Then
+Range(Worksheets("pm").Cells(176 + j, 55), Worksheets("pm").Cells(176 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(116 + i, 4) = "A7" Then
+Range(Worksheets("pm").Cells(176 + j, 2), Worksheets("pm").Cells(176 + j, 49)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(116 + i, 4) = "NO7" Then
+Range(Worksheets("pm").Cells(176 + j, 2), Worksheets("pm").Cells(176 + j, 23)).Interior.Color = 255
+Range(Worksheets("pm").Cells(176 + j, 80), Worksheets("pm").Cells(176 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(116 + i, 4) = "A8" Then
+Range(Worksheets("pm").Cells(176 + j, 2), Worksheets("pm").Cells(176 + j, 71)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(116 + i, 4) = "J2" Then
+Range(Worksheets("pm").Cells(176 + j, 2), Worksheets("pm").Cells(176 + j, 7)).Interior.Color = 255
+Range(Worksheets("pm").Cells(176 + j, 80), Worksheets("pm").Cells(176 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(116 + i, 4) = "J1" Then
+Range(Worksheets("pm").Cells(176 + j, 74), Worksheets("pm").Cells(176 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(116 + i, 4) = "J6" Then
+Range(Worksheets("pm").Cells(176 + j, 68), Worksheets("pm").Cells(176 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(116 + i, 4) = "A1" Then
+Range(Worksheets("pm").Cells(176 + j, 2), Worksheets("pm").Cells(176 + j, 50)).Interior.Color = 255
+End If
+
+j = j + 1
+End If
+Next i
+'pour C.DOC
+j = 0
+For i = 0 To 28
+If Worksheets("copier").Cells(173 + i, 4) <> "N7" And Worksheets("copier").Cells(173 + i, 4) <> "AT" And Worksheets("copier").Cells(173 + i, 4) <> "MD" And Worksheets("copier").Cells(173 + i, 4) <> "SRT" And Worksheets("copier").Cells(173 + i, 4) <> "Omra" And Worksheets("copier").Cells(173 + i, 4) <> "ABI" And Worksheets("copier").Cells(173 + i, 4) <> "CM" And Worksheets("copier").Cells(173 + i, 4) <> "R_NO7" And Worksheets("copier").Cells(173 + i, 4) <> "R_M7" And Worksheets("copier").Cells(173 + i, 4) <> "REC" And Worksheets("copier").Cells(173 + i, 4) <> "MAT" And Worksheets("copier").Cells(173 + i, 4) <> "SSP" And Worksheets("copier").Cells(173 + i, 4) <> "Off" And Worksheets("copier").Cells(173 + i, 4) <> "CA" And Worksheets("copier").Cells(173 + i, 4) <> "--" And Worksheets("copier").Cells(173 + i, 4) <> "FOR" And Worksheets("copier").Cells(173 + i, 4) <> "NO" Then
+Worksheets("pm").Cells(224 + j, 1) = Worksheets("copier").Cells(173 + i, 3)
+If Worksheets("copier").Cells(173 + i, 4) = "M7" Then
+Range(Worksheets("pm").Cells(224 + j, 55), Worksheets("pm").Cells(224 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(173 + i, 4) = "A7" Then
+Range(Worksheets("pm").Cells(224 + j, 2), Worksheets("pm").Cells(224 + j, 49)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(173 + i, 4) = "NO7" Then
+Range(Worksheets("pm").Cells(224 + j, 2), Worksheets("pm").Cells(224 + j, 23)).Interior.Color = 255
+Range(Worksheets("pm").Cells(224 + j, 80), Worksheets("pm").Cells(224 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(173 + i, 4) = "A8" Then
+Range(Worksheets("pm").Cells(224 + j, 2), Worksheets("pm").Cells(224 + j, 71)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(173 + i, 4) = "J2" Then
+Range(Worksheets("pm").Cells(224 + j, 2), Worksheets("pm").Cells(224 + j, 7)).Interior.Color = 255
+Range(Worksheets("pm").Cells(224 + j, 80), Worksheets("pm").Cells(224 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(173 + i, 4) = "J1" Then
+Range(Worksheets("pm").Cells(224 + j, 74), Worksheets("pm").Cells(224 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(173 + i, 4) = "J6" Then
+Range(Worksheets("pm").Cells(224 + j, 68), Worksheets("pm").Cells(224 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(173 + i, 4) = "A1" Then
+Range(Worksheets("pm").Cells(224 + j, 50), Worksheets("pm").Cells(224 + j, 85)).Interior.Color = 255
+End If
+j = j + 1
+End If
+Next i
+'Pour Tu
+j = 0
+For i = 0 To 10
+If Worksheets("copier").Cells(3 + i, 4) <> "N7" And Worksheets("copier").Cells(3 + i, 4) <> "AT" And Worksheets("copier").Cells(3 + i, 4) <> "MD" And Worksheets("copier").Cells(3 + i, 4) <> "SRT" And Worksheets("copier").Cells(3 + i, 4) <> "Omra" And Worksheets("copier").Cells(3 + i, 4) <> "ABI" And Worksheets("copier").Cells(3 + i, 4) <> "CM" And Worksheets("copier").Cells(3 + i, 4) <> "R_NO7" And Worksheets("copier").Cells(3 + i, 4) <> "R_M7" And Worksheets("copier").Cells(3 + i, 4) <> "REC" And Worksheets("copier").Cells(3 + i, 4) <> "MAT" And Worksheets("copier").Cells(3 + i, 4) <> "SSP" And Worksheets("copier").Cells(3 + i, 4) <> "Off" And Worksheets("copier").Cells(3 + i, 4) <> "CA" And Worksheets("copier").Cells(3 + i, 4) <> "--" And Worksheets("copier").Cells(3 + i, 4) <> "FOR" And Worksheets("copier").Cells(3 + i, 4) <> "NO" Then
+Worksheets("pm").Cells(190 + j, 1) = Worksheets("copier").Cells(3 + i, 3)
+If Worksheets("copier").Cells(3 + i, 4) = "M7" Then
+Range(Worksheets("pm").Cells(190 + j, 55), Worksheets("pm").Cells(190 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(3 + i, 4) = "A7" Then
+Range(Worksheets("pm").Cells(190 + j, 2), Worksheets("pm").Cells(190 + j, 49)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(3 + i, 4) = "NO7" Then
+Range(Worksheets("pm").Cells(190 + j, 2), Worksheets("pm").Cells(190 + j, 23)).Interior.Color = 255
+Range(Worksheets("pm").Cells(190 + j, 80), Worksheets("pm").Cells(190 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(3 + i, 4) = "A8" Then
+Range(Worksheets("pm").Cells(190 + j, 2), Worksheets("pm").Cells(190 + j, 71)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(3 + i, 4) = "J2" Then
+Range(Worksheets("pm").Cells(190 + j, 2), Worksheets("pm").Cells(190 + j, 7)).Interior.Color = 255
+Range(Worksheets("pm").Cells(190 + j, 80), Worksheets("pm").Cells(190 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(3 + i, 4) = "J1" Then
+Range(Worksheets("pm").Cells(190 + j, 74), Worksheets("pm").Cells(190 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(3 + i, 4) = "J6" Then
+Range(Worksheets("pm").Cells(190 + j, 68), Worksheets("pm").Cells(190 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(3 + i, 4) = "A1" Then
+Range(Worksheets("pm").Cells(190 + j, 50), Worksheets("pm").Cells(190 + j, 85)).Interior.Color = 255
+End If
+j = j + 1
+End If
+Next i
+'POUR QUALIF RAM
+j = 0
+For i = 0 To 48
+If Worksheets("copier").Cells(241 + i, 4) <> "N7" And Worksheets("copier").Cells(241 + i, 4) <> "AT" And Worksheets("copier").Cells(241 + i, 4) <> "MD" And Worksheets("copier").Cells(241 + i, 4) <> "SRT" And Worksheets("copier").Cells(241 + i, 4) <> "Omra" And Worksheets("copier").Cells(241 + i, 4) <> "ABI" And Worksheets("copier").Cells(241 + i, 4) <> "CM" And Worksheets("copier").Cells(241 + i, 4) <> "R_NO7" And Worksheets("copier").Cells(241 + i, 4) <> "R_M7" And Worksheets("copier").Cells(241 + i, 4) <> "REC" And Worksheets("copier").Cells(241 + i, 4) <> "MAT" And Worksheets("copier").Cells(241 + i, 4) <> "SSP" And Worksheets("copier").Cells(241 + i, 4) <> "Off" And Worksheets("copier").Cells(241 + i, 4) <> "CA" And Worksheets("copier").Cells(241 + i, 4) <> "--" And Worksheets("copier").Cells(241 + i, 4) <> "FOR" And Worksheets("copier").Cells(241 + i, 4) <> "NO" Then
+Worksheets("pm").Cells(253 + j, 1) = Worksheets("copier").Cells(241 + i, 3)
+If Worksheets("copier").Cells(241 + i, 4) = "M7" Then
+Range(Worksheets("pm").Cells(253 + j, 55), Worksheets("pm").Cells(253 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(241 + i, 4) = "A7" Then
+Range(Worksheets("pm").Cells(253 + j, 2), Worksheets("pm").Cells(253 + j, 49)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(241 + i, 4) = "NO7" Then
+Range(Worksheets("pm").Cells(253 + j, 2), Worksheets("pm").Cells(253 + j, 23)).Interior.Color = 255
+Range(Worksheets("pm").Cells(253 + j, 80), Worksheets("pm").Cells(253 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(241 + i, 4) = "A8" Then
+Range(Worksheets("pm").Cells(253 + j, 2), Worksheets("pm").Cells(253 + j, 71)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(241 + i, 4) = "J2" Then
+Range(Worksheets("pm").Cells(253 + j, 2), Worksheets("pm").Cells(253 + j, 7)).Interior.Color = 255
+Range(Worksheets("pm").Cells(253 + j, 80), Worksheets("pm").Cells(253 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(241 + i, 4) = "J1" Then
+Range(Worksheets("pm").Cells(253 + j, 74), Worksheets("pm").Cells(253 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(241 + i, 4) = "J6" Then
+Range(Worksheets("pm").Cells(253 + j, 68), Worksheets("pm").Cells(253 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(241 + i, 4) = "A1" Then
+Range(Worksheets("pm").Cells(253 + j, 50), Worksheets("pm").Cells(253 + j, 85)).Interior.Color = 255
+End If
+j = j + 1
+End If
+Next i
+'
+'POUR QUALIF L6
+j = 0
+For i = 0 To 7
+If Worksheets("copier").Cells(86 + i, 4) <> "N7" And Worksheets("copier").Cells(86 + i, 4) <> "AT" And Worksheets("copier").Cells(86 + i, 4) <> "MD" And Worksheets("copier").Cells(86 + i, 4) <> "SRT" And Worksheets("copier").Cells(86 + i, 4) <> "Omra" And Worksheets("copier").Cells(86 + i, 4) <> "ABI" And Worksheets("copier").Cells(86 + i, 4) <> "CM" And Worksheets("copier").Cells(86 + i, 4) <> "R_NO7" And Worksheets("copier").Cells(86 + i, 4) <> "R_M7" And Worksheets("copier").Cells(86 + i, 4) <> "REC" And Worksheets("copier").Cells(86 + i, 4) <> "MAT" And Worksheets("copier").Cells(86 + i, 4) <> "SSP" And Worksheets("copier").Cells(86 + i, 4) <> "Off" And Worksheets("copier").Cells(86 + i, 4) <> "CA" And Worksheets("copier").Cells(86 + i, 4) <> "--" And Worksheets("copier").Cells(86 + i, 4) <> "FOR" And Worksheets("copier").Cells(86 + i, 4) <> "NO" Then
+Worksheets("pm").Cells(208 + j, 1) = Worksheets("copier").Cells(86 + i, 3)
+If Worksheets("copier").Cells(86 + i, 4) = "M7" Then
+Range(Worksheets("pm").Cells(208 + j, 55), Worksheets("pm").Cells(208 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(86 + i, 4) = "A7" Then
+Range(Worksheets("pm").Cells(208 + j, 2), Worksheets("pm").Cells(208 + j, 49)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(86 + i, 4) = "NO7" Then
+Range(Worksheets("pm").Cells(208 + j, 2), Worksheets("pm").Cells(208 + j, 23)).Interior.Color = 255
+Range(Worksheets("pm").Cells(208 + j, 80), Worksheets("pm").Cells(208 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(86 + i, 4) = "A8" Then
+Range(Worksheets("pm").Cells(208 + j, 2), Worksheets("pm").Cells(208 + j, 71)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(86 + i, 4) = "J2" Then
+Range(Worksheets("pm").Cells(208 + j, 2), Worksheets("pm").Cells(208 + j, 7)).Interior.Color = 255
+Range(Worksheets("pm").Cells(208 + j, 80), Worksheets("pm").Cells(208 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(86 + i, 4) = "J1" Then
+Range(Worksheets("pm").Cells(208 + j, 74), Worksheets("pm").Cells(208 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(86 + i, 4) = "J6" Then
+Range(Worksheets("pm").Cells(208 + j, 68), Worksheets("pm").Cells(208 + j, 85)).Interior.Color = 255
+End If
+If Worksheets("copier").Cells(86 + i, 4) = "A1" Then
+Range(Worksheets("pm").Cells(208 + j, 50), Worksheets("pm").Cells(208 + j, 85)).Interior.Color = 255
+End If
+j = j + 1
+End If
+Next i
+Worksheets("pm").Activate
+
+
+End Sub
+
+

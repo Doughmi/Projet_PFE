@@ -1,0 +1,45 @@
+Sub aff_postes_fixes()
+'Initialiser les compteurs
+Dim i, j, cbls, cwd, ct2, hh, c As Integer
+For i = 2 To 85 Step 6
+kk = 253
+hh = 21
+cbls = 0
+cwd = 0
+ct2 = 0
+c = 0
+While cbls < Worksheets("pm").Cells(11, i)
+If Range(Worksheets("pm").Cells(hh, i), Worksheets("pm").Cells(hh, i + 5)).Interior.Pattern = xlNone And Worksheets("pm").Cells(hh, 1) <> "" Then
+Range(Worksheets("pm").Cells(hh, i), Worksheets("pm").Cells(hh, i + 5)).Interior.Color = 16776960
+Worksheets("pm").Cells(hh, i) = "BLS"
+cbls = cbls + 1
+End If
+hh = hh + 1
+Wend
+While cwd < Worksheets("pm").Cells(12, i)
+If Range(Worksheets("pm").Cells(hh, i), Worksheets("pm").Cells(hh, i + 5)).Interior.Pattern = xlNone And Worksheets("pm").Cells(hh, 1) <> "" Then
+Range(Worksheets("pm").Cells(hh, i), Worksheets("pm").Cells(hh, i + 5)).Interior.Color = 16776960
+Worksheets("pm").Cells(hh, i) = "WD"
+cwd = cwd + 1
+End If
+hh = hh + 1
+Wend
+For j = hh To 222
+If Range(Worksheets("pm").Cells(j, i), Worksheets("pm").Cells(j, i + 5)).Interior.Pattern = xlNone And Worksheets("pm").Cells(j, 1) <> "" Then
+Range(Worksheets("pm").Cells(j, i), Worksheets("pm").Cells(j, i + 5)).Interior.Color = 16776960
+Worksheets("pm").Cells(j, i) = "TO2"
+ct2 = ct2 + 1
+End If
+Next j
+For j = kk To 292
+'While c < Worksheets("pm").Cells(13, i) - ct2
+If Range(Worksheets("pm").Cells(j, i), Worksheets("pm").Cells(j, i + 5)).Interior.Pattern = xlNone And Worksheets("pm").Cells(j, 1) <> "" Then
+Range(Worksheets("pm").Cells(j, i), Worksheets("pm").Cells(j, i + 5)).Interior.Color = 16776960
+Worksheets("pm").Cells(j, i) = "TO2"
+'c = c + 1
+End If
+Next j
+'kk = kk + 1
+'Wend
+Next i
+End Sub

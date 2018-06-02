@@ -1,0 +1,67 @@
+'PAR DOUGHMI NAWFAL
+'INGENIEUR D'ETAT EN GENIE INDUSTRIEL OPTION LOGISTIQUE INTERNATIONAL
+'ESITH CASABLANCA
+Sub Calcul()
+Dim i, j As Integer
+For i = 0 To 85 Step 6
+If Worksheets("pm").Cells(305, 2 + i) = Worksheets("pm").Cells(307, 2 + i) Then
+ Worksheets("pm").Cells(7, 2 + i) = "BLS DEG6"
+ Range(Worksheets("pm").Cells(7, 2 + i), Worksheets("pm").Cells(7, 2 + i + 5)).Interior.Color = 16776960
+  Worksheets("pm").Cells(8, 2 + i) = "WLC DEG3"
+  Range(Worksheets("pm").Cells(8, 2 + i), Worksheets("pm").Cells(8, 2 + i + 5)).Interior.Color = 16776960
+   Worksheets("pm").Cells(9, 2 + i) = "TO2 DEG0"
+   Range(Worksheets("pm").Cells(9, 2 + i), Worksheets("pm").Cells(9, 2 + i + 5)).Interior.Color = 65280
+   End If
+
+If Worksheets("pm").Cells(305, 2 + i) < Worksheets("pm").Cells(307, 2 + i) Then
+ Worksheets("pm").Cells(7, 2 + i) = "BLS DEG6"
+ Range(Worksheets("pm").Cells(7, 2 + i), Worksheets("pm").Cells(7, 2 + i + 5)).Interior.Color = 16776960
+  Worksheets("pm").Cells(8, 2 + i) = "WLC DEG3"
+  Range(Worksheets("pm").Cells(8, 2 + i), Worksheets("pm").Cells(8, 2 + i + 5)).Interior.Color = 16776960
+   Worksheets("pm").Cells(9, 2 + i) = "TO2 DEG" & (Worksheets("pm").Cells(307, 2 + i) - Worksheets("pm").Cells(305, 2 + i))
+   Range(Worksheets("pm").Cells(9, 2 + i), Worksheets("pm").Cells(9, 2 + i + 5)).Interior.Color = 16776960
+   End If
+   If Worksheets("pm").Cells(305, 2 + i) > Worksheets("pm").Cells(307, 2 + i) Then
+    Worksheets("pm").Cells(9, 2 + i) = "TO2 DEG0"
+     Range(Worksheets("pm").Cells(9, 2 + i), Worksheets("pm").Cells(9, 2 + i + 5)).Interior.Color = 65280
+    If Worksheets("pm").Cells(305, 2 + i) - Worksheets("pm").Cells(307, 2 + i) = 6 Then
+    Worksheets("pm").Cells(7, 2 + i) = "BLS DEG0"
+     Range(Worksheets("pm").Cells(7, 2 + i), Worksheets("pm").Cells(7, 2 + i + 5)).Interior.Color = 65280
+    Worksheets("pm").Cells(8, 2 + i) = "WLC DEG3"
+    Range(Worksheets("pm").Cells(8, 2 + i), Worksheets("pm").Cells(8, 2 + i + 5)).Interior.Color = 16776960
+    End If
+    If Worksheets("pm").Cells(305, 2 + i) - Worksheets("pm").Cells(307, 2 + i) < 6 Then
+     Worksheets("pm").Cells(7, 2 + i) = "BLS DEG" & (6 - (Worksheets("pm").Cells(305, 2 + i) - Worksheets("pm").Cells(307, 2 + i)))
+      Range(Worksheets("pm").Cells(7, 2 + i), Worksheets("pm").Cells(7, 2 + i + 5)).Interior.Color = 16776960
+     Worksheets("pm").Cells(8, 2 + i) = "WLC DEG3"
+      Range(Worksheets("pm").Cells(8, 2 + i), Worksheets("pm").Cells(8, 2 + i + 5)).Interior.Color = 16776960
+     End If
+      If Worksheets("pm").Cells(305, 2 + i) - Worksheets("pm").Cells(307, 2 + i) > 6 Then
+      Worksheets("pm").Cells(7, 2 + i) = "BLS DEG0"
+       Range(Worksheets("pm").Cells(7, 2 + i), Worksheets("pm").Cells(7, 2 + i + 5)).Interior.Color = 65280
+      If (3 - (Worksheets("pm").Cells(305, 2 + i) - Worksheets("pm").Cells(307, 2 + i) - 6) > 0) Then
+      Worksheets("pm").Cells(8, 2 + i) = "WLC DEG" & (3 - (Worksheets("pm").Cells(305, 2 + i) - Worksheets("pm").Cells(307, 2 + i) - 6))
+      Range(Worksheets("pm").Cells(8, 2 + i), Worksheets("pm").Cells(8, 2 + i + 5)).Interior.Color = 16776960
+      Else
+      Worksheets("pm").Cells(8, 2 + i) = "WLC DEG0"
+      Range(Worksheets("pm").Cells(8, 2 + i), Worksheets("pm").Cells(8, 2 + i + 5)).Interior.Color = 65280
+      End If
+      End If
+      End If
+      Next i
+      For i = 0 To 86 Step 6
+       Range(Worksheets("pm").Cells(7, 2 + i), Worksheets("pm").Cells(7, 2 + i + 5)).Borders(xlEdgeTop).LineStyle = xlContinuous
+      Range(Worksheets("pm").Cells(7, 2 + i), Worksheets("pm").Cells(7, 2 + i + 5)).Borders(xlEdgeBottom).LineStyle = xlContinuous
+       Range(Worksheets("pm").Cells(7, 2 + i), Worksheets("pm").Cells(7, 2 + i + 5)).Borders(xlEdgeRight).LineStyle = xlContinuous
+       Range(Worksheets("pm").Cells(7, 2 + i), Worksheets("pm").Cells(7, 2 + i + 5)).Borders(xlEdgeLeft).LineStyle = xlContinuous
+        Range(Worksheets("pm").Cells(8, 2 + i), Worksheets("pm").Cells(8, 2 + i + 5)).Borders(xlEdgeTop).LineStyle = xlContinuous
+      Range(Worksheets("pm").Cells(8, 2 + i), Worksheets("pm").Cells(8, 2 + i + 5)).Borders(xlEdgeBottom).LineStyle = xlContinuous
+       Range(Worksheets("pm").Cells(8, 2 + i), Worksheets("pm").Cells(8, 2 + i + 5)).Borders(xlEdgeRight).LineStyle = xlContinuous
+       Range(Worksheets("pm").Cells(8, 2 + i), Worksheets("pm").Cells(8, 2 + i + 5)).Borders(xlEdgeLeft).LineStyle = xlContinuous
+        Range(Worksheets("pm").Cells(9, 2 + i), Worksheets("pm").Cells(9, 2 + i + 5)).Borders(xlEdgeTop).LineStyle = xlContinuous
+      Range(Worksheets("pm").Cells(9, 2 + i), Worksheets("pm").Cells(9, 2 + i + 5)).Borders(xlEdgeBottom).LineStyle = xlContinuous
+       Range(Worksheets("pm").Cells(9, 2 + i), Worksheets("pm").Cells(9, 2 + i + 5)).Borders(xlEdgeRight).LineStyle = xlContinuous
+       Range(Worksheets("pm").Cells(9, 2 + i), Worksheets("pm").Cells(9, 2 + i + 5)).Borders(xlEdgeLeft).LineStyle = xlContinuous
+       Next i
+       Worksheets("pm").Cells(7, 2).Activate
+    End Sub

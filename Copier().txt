@@ -1,0 +1,4 @@
+Sub copier()
+Worksheets("Feuil1").Range("A1:D290").Copy (Worksheets("copier").Range("A1"))
+Worksheets("copier").Activate
+End Sub

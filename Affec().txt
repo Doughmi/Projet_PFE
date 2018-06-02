@@ -1,0 +1,286 @@
+'PAR DOUGHMI NAWFAL
+'INGENIEUR D'ETAT EN GENIE INDUSTRIEL OPTION LOGISTIQUE
+'ESITH CASABLANCA
+Sub PV()
+'DECLACRER LES COMPTEURS POUR CHAQUE COMPAGNIE
+Dim CTK, CQT, CEY, CSV, CAH, CEK, CAF, CHV, CTU, CJAF, CL6, c, i, j, jour, kk, ii As Integer
+Dim d As Date
+d = Worksheets("score").Cells(3, 22)
+If d < Worksheets("score").Cells(17, 21) Or d > Worksheets("score").Cells(18, 21) Then
+MsgBox ("Erreur Date")
+
+Exit Sub
+End If
+jour = Worksheets("score").Cells(4, 22)
+'*****************DIMANCHE***************
+For ii = 0 To 6
+If Worksheets("score").Cells(1, 13 + ii) = jour Then
+
+'*****************JAF********************
+'TK:16711680
+'QR:16711935
+'EY:16776960
+'SV:16751001
+'AH:6697881
+'EK:39423
+'AF:16777164
+'HV:6697728
+'TU:8421631
+
+
+For i = 0 To 40
+If Worksheets("score").Cells(2 + i, 1) > Worksheets("score").Cells(7, 22) And Worksheets("score").Cells(2 + i, 1) < Worksheets("score").Cells(8, 22) And Worksheets("score").Cells(2 + i, 19) = 1 And Worksheets("score").Cells(2 + i, 2) = "JAF" Then
+kk = 0
+CJAF = 0
+For j = 1 To 85
+'Si l'heure de vol dans le programme de vol egal le l'heure dans la planche
+If Worksheets("pm").Cells(4, 1 + j) = Worksheets("score").Cells(2 + i, 1) Then
+'Si le compteur kk est inférieur aux nombre des agents exigés par JAF
+While kk < 3
+'Verifier que l'agent est disponible
+If Range(Worksheets("pm").Cells(21 + CJAF, 1 + j), Worksheets("pm").Cells(21 + CJAF, 1 + j - 18)).Interior.Pattern = xlNone Then
+'Affectation de tache
+Range(Worksheets("pm").Cells(21 + CJAF, 1 + j), Worksheets("pm").Cells(21 + CJAF, 1 + j - 18)).Interior.Color = 65280
+Worksheets("pm").Cells(21 + CJAF, 1 + j - 18) = "JAF"
+'Passer à l'agent suivant
+CJAF = CJAF + 1
+kk = kk + 1
+Else
+CJAF = CJAF + 1
+End If
+Wend
+End If
+Next j
+End If
+Next i
+
+'************************TK**********************************
+For i = 0 To 40
+If Worksheets("score").Cells(2 + i, 1) > Worksheets("score").Cells(7, 22) And Worksheets("score").Cells(2 + i, 1) < Worksheets("score").Cells(8, 22) And Worksheets("score").Cells(2 + i, 19) = 1 And Worksheets("score").Cells(2 + i, 2) = "TK" Then
+kk = 0
+CTK = 0
+For j = 1 To 85
+If Worksheets("pm").Cells(4, 1 + j) = Worksheets("score").Cells(2 + i, 1) Then
+While kk < 7
+If Range(Worksheets("pm").Cells(38 + CTK, 1 + j), Worksheets("pm").Cells(38 + CTK, 1 + j - 24)).Interior.Pattern = xlNone Then
+Range(Worksheets("pm").Cells(38 + CTK, 1 + j), Worksheets("pm").Cells(38 + CTK, 1 + j - 24)).Interior.Color = 16711680
+Worksheets("pm").Cells(38 + CTK, 1 + j - 24) = "TK"
+CTK = CTK + 1
+kk = kk + 1
+Else
+CTK = CTK + 1
+End If
+Wend
+End If
+Next j
+End If
+Next i
+
+'*******************QR***************************************
+For i = 0 To 40
+If Worksheets("score").Cells(2 + i, 1) > Worksheets("score").Cells(7, 22) And Worksheets("score").Cells(2 + i, 1) < Worksheets("score").Cells(8, 22) And Worksheets("score").Cells(2 + i, 19) = 1 And Worksheets("score").Cells(2 + i, 2) = "QR" Then
+kk = 0
+CQR = 0
+For j = 1 To 85
+If Worksheets("pm").Cells(4, 1 + j) = Worksheets("score").Cells(2 + i, 1) Then
+While kk < 9
+If Range(Worksheets("pm").Cells(60 + CQR, 1 + j), Worksheets("pm").Cells(60 + CQR, 1 + j - 30)).Interior.Pattern = xlNone Then
+Range(Worksheets("pm").Cells(60 + CQR, 1 + j), Worksheets("pm").Cells(60 + CQR, 1 + j - 30)).Interior.Color = 16711935
+Worksheets("pm").Cells(60 + CQR, 1 + j - 30) = "QR"
+CQR = CQR + 1
+kk = kk + 1
+Else
+CQR = CQR + 1
+End If
+Wend
+End If
+Next j
+End If
+Next i
+
+'************************EY***********************
+For i = 0 To 40
+If Worksheets("score").Cells(2 + i, 1) > Worksheets("score").Cells(7, 22) And Worksheets("score").Cells(2 + i, 1) < Worksheets("score").Cells(8, 22) And Worksheets("score").Cells(2 + i, 19) = 1 And Worksheets("score").Cells(2 + i, 2) = "EY" Then
+kk = 0
+CEY = 0
+For j = 1 To 85
+If Worksheets("pm").Cells(4, 1 + j) = Worksheets("score").Cells(2 + i, 1) Then
+While kk < 8
+If Range(Worksheets("pm").Cells(79 + CEY, 1 + j), Worksheets("pm").Cells(79 + CEY, 1 + j - 24)).Interior.Pattern = xlNone Then
+Range(Worksheets("pm").Cells(79 + CEY, 1 + j), Worksheets("pm").Cells(79 + CEY, 1 + j - 24)).Interior.Color = 16776960
+Worksheets("pm").Cells(79 + CEY, 1 + j - 24) = "EY"
+CEY = CEY + 1
+kk = kk + 1
+Else
+CEY = CEY + 1
+End If
+Wend
+End If
+Next j
+End If
+Next i
+
+'***************************SV**********************
+For i = 0 To 40
+If Worksheets("score").Cells(2 + i, 1) > Worksheets("score").Cells(7, 22) And Worksheets("score").Cells(2 + i, 1) < Worksheets("score").Cells(8, 22) And Worksheets("score").Cells(2 + i, 19) = 1 And Worksheets("score").Cells(2 + i, 2) = "SV" Then
+kk = 0
+CSV = 0
+For j = 1 To 85
+If Worksheets("pm").Cells(4, 1 + j) = Worksheets("score").Cells(2 + i, 1) Then
+While kk < 9
+If Range(Worksheets("pm").Cells(93 + CSV, 1 + j), Worksheets("pm").Cells(93 + CSV, 1 + j - 28)).Interior.Pattern = xlNone Then
+Range(Worksheets("pm").Cells(93 + CSV, 1 + j), Worksheets("pm").Cells(93 + CSV, 1 + j - 28)).Interior.Color = 16751001
+Worksheets("pm").Cells(93 + CSV, 1 + j - 28) = "SV"
+CSV = CSV + 1
+kk = kk + 1
+Else
+CSV = CSV + 1
+End If
+Wend
+End If
+Next j
+End If
+Next i
+
+'**********************AH******************************
+For i = 0 To 40
+If Worksheets("score").Cells(2 + i, 1) > Worksheets("score").Cells(7, 22) And Worksheets("score").Cells(2 + i, 1) < Worksheets("score").Cells(8, 22) And Worksheets("score").Cells(2 + i, 19) = 1 And Worksheets("score").Cells(2 + i, 2) = "AH" Then
+kk = 0
+CAH = 0
+For j = 1 To 85
+If Worksheets("pm").Cells(4, 1 + j) = Worksheets("score").Cells(2 + i, 1) Then
+While kk < 5
+If Range(Worksheets("pm").Cells(114 + CAH, 1 + j), Worksheets("pm").Cells(114 + CAH, 1 + j - 24)).Interior.Pattern = xlNone Then
+Range(Worksheets("pm").Cells(114 + CAH, 1 + j), Worksheets("pm").Cells(114 + CAH, 1 + j - 24)).Interior.Color = 6697881
+Worksheets("pm").Cells(114 + CAH, 1 + j - 24) = "AH"
+CAH = CAH + 1
+kk = kk + 1
+Else
+CAH = CAH + 1
+End If
+Wend
+End If
+Next j
+End If
+Next i
+
+'*********************EK*****************
+For i = 0 To 40
+If Worksheets("score").Cells(2 + i, 1) > Worksheets("score").Cells(7, 22) And Worksheets("score").Cells(2 + i, 1) < Worksheets("score").Cells(8, 22) And Worksheets("score").Cells(2 + i, 19) = 1 And Worksheets("score").Cells(2 + i, 2) = "EK" Then
+kk = 0
+CEK = 0
+For j = 1 To 85
+If Worksheets("pm").Cells(4, 1 + j) = Worksheets("score").Cells(2 + i, 1) Then
+While kk < 13
+If Range(Worksheets("pm").Cells(129 + CEK, 1 + j), Worksheets("pm").Cells(129 + CEK, 1 + j - 24)).Interior.Pattern = xlNone Then
+Range(Worksheets("pm").Cells(129 + CEK, 1 + j), Worksheets("pm").Cells(129 + CEK, 1 + j - 24)).Interior.Color = 39423
+Worksheets("pm").Cells(129 + CEK, 1 + j - 24) = "EK"
+CEK = CEK + 1
+kk = kk + 1
+Else
+CEK = CEK + 1
+End If
+Wend
+End If
+Next j
+End If
+Next i
+
+'************************AF**************************
+
+For i = 0 To 40
+If Worksheets("score").Cells(2 + i, 1) > Worksheets("score").Cells(7, 22) And Worksheets("score").Cells(2 + i, 1) < Worksheets("score").Cells(8, 22) And Worksheets("score").Cells(2 + i, 19) = 1 And Worksheets("score").Cells(2 + i, 2) = "AF" Then
+kk = 0
+CAF = 0
+For j = 1 To 85
+If Worksheets("pm").Cells(4, 1 + j) = Worksheets("score").Cells(2 + i, 1) Then
+While kk < 5
+If Range(Worksheets("pm").Cells(156 + CAF, 1 + j), Worksheets("pm").Cells(156 + CAF, 1 + j - 18)).Interior.Pattern = xlNone Then
+Range(Worksheets("pm").Cells(156 + CAF, 1 + j), Worksheets("pm").Cells(156 + CAF, 1 + j - 18)).Interior.Color = 16777164
+Worksheets("pm").Cells(156 + CAF, 1 + j - 18) = "AF"
+CAF = CAF + 1
+kk = kk + 1
+Else
+CAF = CAF + 1
+End If
+Wend
+End If
+Next j
+End If
+Next i
+
+'*****************HV*******************************
+For i = 0 To 40
+If Worksheets("score").Cells(2 + i, 1) > Worksheets("score").Cells(7, 22) And Worksheets("score").Cells(2 + i, 1) < Worksheets("score").Cells(8, 22) And Worksheets("score").Cells(2 + i, 19) = 1 And Worksheets("score").Cells(2 + i, 2) = "TO" Then
+kk = 0
+CHV = 0
+For j = 1 To 85
+If Worksheets("pm").Cells(4, 1 + j) = Worksheets("score").Cells(2 + i, 1) Then
+While kk < 3
+If Range(Worksheets("pm").Cells(176 + CHV, 1 + j), Worksheets("pm").Cells(176 + CHV, 1 + j - 18)).Interior.Pattern = xlNone Then
+Range(Worksheets("pm").Cells(176 + CHV, 1 + j), Worksheets("pm").Cells(176 + CHV, 1 + j - 18)).Interior.Color = 6697728
+Worksheets("pm").Cells(176 + CHV, 1 + j - 18) = "HV"
+CHV = CHV + 1
+kk = kk + 1
+Else
+CHV = CHV + 1
+End If
+Wend
+End If
+Next j
+End If
+Next i
+
+'************************TU*********************
+For i = 0 To 40
+If Worksheets("score").Cells(2 + i, 1) > Worksheets("score").Cells(7, 22) And Worksheets("score").Cells(2 + i, 1) < Worksheets("score").Cells(8, 22) And Worksheets("score").Cells(2 + i, 19) = 1 And Worksheets("score").Cells(2 + i, 2) = "TU" Then
+kk = 0
+CTU = 0
+For j = 1 To 85
+If Worksheets("pm").Cells(4, 1 + j) = Worksheets("score").Cells(2 + i, 1) Then
+While kk < 3
+If Range(Worksheets("pm").Cells(190 + CTU, 1 + j), Worksheets("pm").Cells(190 + CTU, 1 + j - 18)).Interior.Pattern = xlNone Then
+Range(Worksheets("pm").Cells(190 + CTU, 1 + j), Worksheets("pm").Cells(190 + CTU, 1 + j - 18)).Interior.Color = 8421631
+Worksheets("pm").Cells(190 + CTU, 1 + j - 18) = "TU"
+CTU = CTU + 1
+kk = kk + 1
+Else
+CTU = CTU + 1
+End If
+Wend
+End If
+Next j
+End If
+Next i
+
+
+'********************L6*******************
+For i = 0 To 40
+If Worksheets("score").Cells(2 + i, 1) > Worksheets("score").Cells(7, 22) And Worksheets("score").Cells(2 + i, 1) < Worksheets("score").Cells(8, 22) And Worksheets("score").Cells(2 + i, 19) = 1 And Worksheets("score").Cells(2 + i, 2) = "L6" Then
+kk = 0
+CL6 = 0
+For j = 1 To 85
+If Worksheets("pm").Cells(4, 1 + j) = Worksheets("score").Cells(2 + i, 1) Then
+While kk < 2
+If Range(Worksheets("pm").Cells(208 + CL6, 1 + j), Worksheets("pm").Cells(208 + CL6, 1 + j - 18)).Interior.Pattern = xlNone Then
+Range(Worksheets("pm").Cells(208 + CL6, 1 + j), Worksheets("pm").Cells(208 + CL6, 1 + j - 18)).Interior.Color = 65280
+Worksheets("pm").Cells(208 + CL6, 1 + j - 18) = "L6"
+CL6 = CL6 + 1
+kk = kk + 1
+Else
+CL6 = CL6 + 1
+End If
+Wend
+End If
+Next j
+End If
+Next i
+End If
+Next ii
+
+
+
+
+End Sub
+
+

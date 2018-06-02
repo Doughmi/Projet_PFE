@@ -1,0 +1,39 @@
+'PAR DOUGHMI NAWFAL
+'INGENIEUR D'ETAT EN GENIE INDUSTRIEL OPTION LOGISTIQUE
+'ESITH CASABLANCA
+Sub Final()
+Application.DisplayAlerts = wdAlertsNone
+Application.ScreenUpdating = False
+Dim i, j, k, p As Integer
+Dim drapeau As Boolean
+drapeau = False
+k = 21
+For i = 253 To 300
+'k = 21
+For j = 5 To 85
+k = 21
+drapeau = False
+If Range(Worksheets("pm").Cells(i, j), Worksheets("pm").Cells(i, j - 4)).Interior.Color = 65535 Then
+If Range(Worksheets("pm").Cells(k, j), Worksheets("pm").Cells(k, j - 4)).Interior.Pattern = xlNone And Worksheets("pm").Cells(k, 1) <> "" Then
+Range(Worksheets("pm").Cells(k, j), Worksheets("pm").Cells(k, j - 4)).Interior.Color = 65535
+Worksheets("pm").Cells(i, j - 4).Copy Worksheets("pm").Cells(k, j - 4)
+Range(Worksheets("pm").Cells(i, j), Worksheets("pm").Cells(i, j - 4)).Interior.Pattern = xlNone
+Range(Worksheets("pm").Cells(i, j), Worksheets("pm").Cells(i, j - 4)) = ""
+Else
+While drapeau = False
+k = k + 1
+If Range(Worksheets("pm").Cells(k, j), Worksheets("pm").Cells(k, j - 4)).Interior.Pattern = xlNone And Worksheets("pm").Cells(k, 1) <> "" Then
+Range(Worksheets("pm").Cells(k, j), Worksheets("pm").Cells(k, j - 4)).Interior.Color = 65535
+Worksheets("pm").Cells(i, j - 4).Copy Worksheets("pm").Cells(k, j - 4)
+Range(Worksheets("pm").Cells(i, j), Worksheets("pm").Cells(i, j - 4)).Interior.Color = 13421619
+Range(Worksheets("pm").Cells(i, j), Worksheets("pm").Cells(i, j - 4)).Interior.Pattern = xlNone
+Range(Worksheets("pm").Cells(i, j), Worksheets("pm").Cells(i, j - 4)) = ""
+drapeau = True
+End If
+Wend
+End If
+End If
+Next j
+Next i
+Application.ScreenUpdating = True
+End Sub

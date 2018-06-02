@@ -1,0 +1,35 @@
+'PAR DOUGHMI NAWFAL
+'INGENIEUR D'ETAT EN GENIE INDUSTRIEL OPTION LOGISTIQUE
+'ESITH CASABLANCA
+Sub AFF_RAM()
+Application.DisplayAlerts = wdAlertsNone
+Application.ScreenUpdating = False
+Dim i As Integer
+Dim j As Integer
+Dim CRAM As Integer
+Dim kk As Integer
+For i = 0 To 53
+If Worksheets("PVRAM2").Cells(2 + i, 1) > Worksheets("score").Cells(7, 22) And Worksheets("PVRAM2").Cells(2 + i, 1) < Worksheets("score").Cells(8, 22) Then
+kk = 0
+CRAM = 0
+For j = 1 To 85
+If Worksheets("pm").Cells(4, 1 + j) = Worksheets("PVRAM2").Cells(2 + i, 1) Then
+While kk < 2
+If Range(Worksheets("pm").Cells(253 + CRAM, 1 + j), Worksheets("pm").Cells(253 + CRAM, 1 + j - 5)).Interior.Pattern = xlNone Then
+'Range(Worksheets("pm").Cells(253 + CRAM, 1 + j), Worksheets("pm").Cells(253 + CRAM, 1 + j - 4)).MergeCells = True
+Range(Worksheets("pm").Cells(253 + CRAM, 1 + j), Worksheets("pm").Cells(253 + CRAM, 1 + j - 4)).VerticalAlignment = xlVAlignCenter
+Range(Worksheets("pm").Cells(253 + CRAM, 1 + j), Worksheets("pm").Cells(253 + CRAM, 1 + j - 4)).Interior.Color = 65535
+'Range(Worksheets("pm").Cells(253 + CRAM, 1 + j), Worksheets("pm").Cells(253 + CRAM, 1 + j - 4)) = Worksheets("PVRAM2").Cells(2 + i, 2)
+Worksheets("pm").Cells(253 + CRAM, 1 + j - 4) = Worksheets("PVRAM2").Cells(2 + i, 2)
+CRAM = CRAM + 1
+kk = kk + 1
+Else
+CRAM = CRAM + 1
+End If
+Wend
+End If
+Next j
+End If
+Next i
+Application.ScreenUpdating = True
+End Sub
